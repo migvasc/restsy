@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Appwebexemps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Id seq</th>
+      <th>Endereco</th>
+      <th>Preco</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appwebexemps.each do |appwebexemp| %>
+      <tr>
+        <td><%= appwebexemp.nome %></td>
+        <td><%= appwebexemp.id_seq %></td>
+        <td><%= appwebexemp.endereco %></td>
+        <td><%= appwebexemp.preco %></td>
+        <td><%= appwebexemp.email %></td>
+        <td><%= link_to 'Show', appwebexemp %></td>
+        <td><%= link_to 'Edit', edit_appwebexemp_path(appwebexemp) %></td>
+        <td><%= link_to 'Destroy', appwebexemp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appwebexemp', new_appwebexemp_path %>

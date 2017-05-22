@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @appwebexemp.nome %>
+</p>
+
+<p>
+  <strong>Id seq:</strong>
+  <%= @appwebexemp.id_seq %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @appwebexemp.endereco %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @appwebexemp.preco %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @appwebexemp.email %>
+</p>
+
+<%= link_to 'Edit', edit_appwebexemp_path(@appwebexemp) %> |
+<%= link_to 'Back', appwebexemps_path %>
