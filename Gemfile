@@ -51,6 +51,7 @@ group :development do
   gem "factory_girl_rails"
   gem "capybara"
   #gem 'activerecord-jdbcpostgresql-adapter'
+  gem 'devise'
   
   
 end

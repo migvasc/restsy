@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Menu X Meals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Menu</th>
+      <th>Meal</th>
+      <th>Periodo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @menu_x_meals.each do |menu_x_meal| %>
+      <tr>
+        <td><%= menu_x_meal.menu %></td>
+        <td><%= menu_x_meal.meal %></td>
+        <td><%= menu_x_meal.periodo %></td>
+        <td><%= link_to 'Show', menu_x_meal %></td>
+        <td><%= link_to 'Edit', edit_menu_x_meal_path(menu_x_meal) %></td>
+        <td><%= link_to 'Destroy', menu_x_meal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Menu x meal', new_menu_x_meal_path %>

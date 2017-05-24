@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  devise_for :users
+  resources :subscriptions
+  resources :menu_x_meals
+  resources :menus
+  resources :meals
+  resources :customers
   resources :appwebexemps
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -54,4 +62,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root :to => "home#index"
 end
