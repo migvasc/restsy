@@ -24,15 +24,15 @@ production:
 test:
   adapter: postgresql
   database: test_restsy
-  username: ubuntu 
-  password: restsy
+  username: restsy_bd 
+  password: restsy_bd
   
   
 development:
   adapter: postgresql
   database: dev_restsy
-  username: ubuntu 
-  password: restsy #
+  username: restsy_bd 
+  password: restsy_bd #
   
   #<<: *default
 #  database: db/test.sqlite3
