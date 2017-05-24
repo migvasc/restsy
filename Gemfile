@@ -45,6 +45,11 @@ group :development do
   
   gem 'pg'
   
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'faker'
+  gem "factory_girl_rails"
+  gem "capybara"
   #gem 'activerecord-jdbcpostgresql-adapter'
   
   
