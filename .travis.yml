@@ -12,6 +12,7 @@ before_script:
 script: bundle exec rspec spec --color --format doc
   
 # safelist
+#alteração só para falar que alterou
 branches:
   only:
 - master
