@@ -5,8 +5,7 @@ RSpec.describe "subscriptions/edit", type: :view do
     @subscription = assign(:subscription, Subscription.create!(
       :customer => nil,
       :menu => nil,
-      :active => "MyString",
-      :boolean => "MyString"
+      :active => false
     ))
   end
 
@@ -20,8 +19,6 @@ RSpec.describe "subscriptions/edit", type: :view do
       assert_select "input#subscription_menu_id[name=?]", "subscription[menu_id]"
 
       assert_select "input#subscription_active[name=?]", "subscription[active]"
-
-      assert_select "input#subscription_boolean[name=?]", "subscription[boolean]"
     end
   end
 end

@@ -6,8 +6,7 @@ RSpec.describe "meals/show", type: :view do
       :name => "Name",
       :foods => "Foods",
       :calories => 2.5,
-      :description => "Description",
-      :string => "String"
+      :description => "Description"
     ))
   end
 
@@ -17,6 +16,5 @@ RSpec.describe "meals/show", type: :view do
     expect(rendered).to match(/Foods/)
     expect(rendered).to match(/2.5/)
     expect(rendered).to match(/Description/)
-    expect(rendered).to match(/String/)
   end
 end

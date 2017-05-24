@@ -5,8 +5,7 @@ RSpec.describe "subscriptions/show", type: :view do
     @subscription = assign(:subscription, Subscription.create!(
       :customer => nil,
       :menu => nil,
-      :active => "Active",
-      :boolean => "Boolean"
+      :active => false
     ))
   end
 
@@ -14,7 +13,6 @@ RSpec.describe "subscriptions/show", type: :view do
     render
     expect(rendered).to match(//)
     expect(rendered).to match(//)
-    expect(rendered).to match(/Active/)
-    expect(rendered).to match(/Boolean/)
+    expect(rendered).to match(/false/)
   end
 end

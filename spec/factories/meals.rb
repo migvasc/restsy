@@ -4,6 +4,5 @@ FactoryGirl.define do
     foods "MyString"
     calories 1.5
     description "MyString"
-    string "MyString"
   end
 end

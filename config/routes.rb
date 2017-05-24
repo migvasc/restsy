@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
-  get 'home/index'
-
-  devise_for :users
+  
   resources :subscriptions
   resources :menu_x_meals
   resources :menus
   resources :meals
   resources :customers
-  resources :appwebexemps
+  devise_for :users
+  get 'home/index'
+  get "customers/", to: "customers#customers_index", as: "customers_index"
+  get "meals/", to: "meals#index", as: "meals_index"
+  get "menus/", to: "menus#index", as: "menus_index"
+  get "menu_x_meals/", to: "menu_x_meals#index", as: "menu_x_meals_index"
+  get "subscriptions/", to: "subscriptions#index", as: "subscriptions_index"
+  #devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

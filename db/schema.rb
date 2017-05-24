@@ -11,20 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170524040949) do
+ActiveRecord::Schema.define(version: 20170524232811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "appwebexemps", force: :cascade do |t|
-    t.string   "nome"
-    t.string   "id_seq"
-    t.text     "endereco"
-    t.decimal  "preco"
-    t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "customers", force: :cascade do |t|
     t.string   "name"
@@ -41,7 +31,6 @@ ActiveRecord::Schema.define(version: 20170524040949) do
     t.string   "foods"
     t.float    "calories"
     t.string   "description"
-    t.string   "string"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -69,8 +58,7 @@ ActiveRecord::Schema.define(version: 20170524040949) do
   create_table "subscriptions", force: :cascade do |t|
     t.integer  "customer_id"
     t.integer  "menu_id"
-    t.string   "active"
-    t.string   "boolean"
+    t.boolean  "active"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

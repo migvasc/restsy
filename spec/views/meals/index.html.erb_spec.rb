@@ -7,15 +7,13 @@ RSpec.describe "meals/index", type: :view do
         :name => "Name",
         :foods => "Foods",
         :calories => 2.5,
-        :description => "Description",
-        :string => "String"
+        :description => "Description"
       ),
       Meal.create!(
         :name => "Name",
         :foods => "Foods",
         :calories => 2.5,
-        :description => "Description",
-        :string => "String"
+        :description => "Description"
       )
     ])
   end
@@ -26,6 +24,5 @@ RSpec.describe "meals/index", type: :view do
     assert_select "tr>td", :text => "Foods".to_s, :count => 2
     assert_select "tr>td", :text => 2.5.to_s, :count => 2
     assert_select "tr>td", :text => "Description".to_s, :count => 2
-    assert_select "tr>td", :text => "String".to_s, :count => 2
   end
 end

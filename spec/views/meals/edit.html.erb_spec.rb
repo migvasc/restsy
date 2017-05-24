@@ -6,8 +6,7 @@ RSpec.describe "meals/edit", type: :view do
       :name => "MyString",
       :foods => "MyString",
       :calories => 1.5,
-      :description => "MyString",
-      :string => "MyString"
+      :description => "MyString"
     ))
   end
 
@@ -23,8 +22,6 @@ RSpec.describe "meals/edit", type: :view do
       assert_select "input#meal_calories[name=?]", "meal[calories]"
 
       assert_select "input#meal_description[name=?]", "meal[description]"
-
-      assert_select "input#meal_string[name=?]", "meal[string]"
     end
   end
 end

@@ -6,6 +6,9 @@ class CustomersController < ApplicationController
   def index
     @customers = Customer.all
   end
+  
+  def customers_index
+  end
 
   # GET /customers/1
   # GET /customers/1.json

@@ -5,7 +5,6 @@ class CreateMeals < ActiveRecord::Migration
       t.string :foods
       t.float :calories
       t.string :description
-      t.string :string
 
       t.timestamps null: false
     end
