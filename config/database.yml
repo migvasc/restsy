@@ -14,7 +14,8 @@ production:
   port: 5432
   username: ddcvxrnaxlpwni
   password: 464c4d2efb803d554de8f59c4dbaf45cd9053b5f650d67bdde338508254fc613
-  host:  ec2-23-21-220-23.compute-1.amazonaws.com
+  host: ec2-23-21-220-23.compute-1.amazonaws.com
+
   
   # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -39,3 +40,4 @@ development:
 #production:
 #  <<: *default
   #database: db/production.sqlite3
+

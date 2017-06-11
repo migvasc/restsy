@@ -1,0 +1,30 @@
+BANCO DE DADOS
+
+
+
+rails g scaffold Customer name:string address:string phone:string email:string password:string
+ 
+rails g scaffold Meal name:string foods:string calories:float description: string
+ 
+rails scaffold g Menu name:string customer:references
+ 
+rails g scaffold Menu_x_Meal menu:references meal:references periodo:string
+ 
+rails g scaffold Subscription customer:references menu:references active:boolean
+
+
+############# database                                         ##########################
+
+http://jeffthomas.xyz/many-to-many-relationships-in-rails
+
+http://guides.rubyonrails.org/association_basics.html
+
+
+
+############## API DAS COMIDAS COM WEB SEMANTICA E AS PORRA TODA #####################
+
+https://spoonacular.com/food-api
+
+https://market.mashape.com/spoonacular/recipe-food-nutrition
+
+
