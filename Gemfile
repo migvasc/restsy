@@ -11,6 +11,7 @@ gem 'faker'
 gem "factory_girl_rails"
 gem "capybara"
 #gem 'activerecord-jdbcpostgresql-adapter'
+
 gem 'devise'
 
 # Use sqlite3 as the database for Active Record
