@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   
+ 
+  devise_for :users
   resources :subscriptions
   resources :menu_x_meals
   resources :menus
   resources :meals
   resources :customers
-  devise_for :users
+  
   get 'home/index'
   get "customers/", to: "customers#customers_index", as: "customers_index"
   get "meals/", to: "meals#index", as: "meals_index"
@@ -67,5 +69,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root :to => "home#index"
+     root :to => "home#index"
 end
