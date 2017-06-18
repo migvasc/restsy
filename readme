@@ -1,7 +1,6 @@
 BANCO DE DADOS
 
 
-
 rails g scaffold Customer name:string address:string phone:string email:string password:string
  
 rails g scaffold Meal name:string foods:string calories:float description: string
@@ -28,3 +27,6 @@ https://spoonacular.com/food-api
 https://market.mashape.com/spoonacular/recipe-food-nutrition
 
 
+DICAS BASICAS DO RAILS -> SLIDES DAS VIDEOS AULAS LÁ
+
+http://railsforzombies.com.s3.amazonaws.com/Rails-For-Zombies-Slides.pdf
