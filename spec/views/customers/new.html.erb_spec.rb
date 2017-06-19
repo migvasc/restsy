@@ -6,8 +6,7 @@ RSpec.describe "customers/new", type: :view do
       :name => "MyString",
       :address => "MyString",
       :phone => "MyString",
-      :email => "MyString",
-      :password => "MyString"
+      
     ))
   end
 

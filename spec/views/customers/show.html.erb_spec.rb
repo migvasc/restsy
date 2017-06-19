@@ -6,8 +6,7 @@ RSpec.describe "customers/show", type: :view do
       :name => "Name",
       :address => "Address",
       :phone => "Phone",
-      :email => "Email",
-      :password => "Password"
+      
     ))
   end
 
@@ -16,7 +15,6 @@ RSpec.describe "customers/show", type: :view do
     expect(rendered).to match(/Name/)
     expect(rendered).to match(/Address/)
     expect(rendered).to match(/Phone/)
-    expect(rendered).to match(/Email/)
-    expect(rendered).to match(/Password/)
+    ex
   end
 end
