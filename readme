@@ -32,4 +32,12 @@ DICAS BASICAS DO RAILS -> SLIDES DAS VIDEOS AULAS LÁ
 http://railsforzombies.com.s3.amazonaws.com/Rails-For-Zombies-Slides.pdf
 
 
-#eita porra
+
+
+
+#COMO ATIVAR O MODO DE PRODUÇÂO PARA DAR DEPLOY NO HEROKU:
+https://stackoverflow.com/questions/1949229/change-a-rails-application-to-production
+
+remover colunas do db
+https://stackoverflow.com/questions/38820188/rails-5-how-to-remove-a-column-from-a-database
+

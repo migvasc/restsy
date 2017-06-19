@@ -22,9 +22,7 @@ RSpec.describe "customers/edit", type: :view do
 
       assert_select "input#customer_phone[name=?]", "customer[phone]"
 
-      assert_select "input#customer_email[name=?]", "customer[email]"
-
-      assert_select "input#customer_password[name=?]", "customer[password]"
+      
     end
   end
 end
