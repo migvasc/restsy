@@ -15,6 +15,9 @@ RSpec.describe "customers/show", type: :view do
     expect(rendered).to match(/Name/)
     expect(rendered).to match(/Address/)
     expect(rendered).to match(/Phone/)
-    ex
+    
+    
+    
+    
   end
 end
