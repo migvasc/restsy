@@ -54,27 +54,20 @@
                         <a href="#page-top"></a>
                     </li>
                     <% if user_signed_in? %>
-                    Olá, <strong><%= current_user.email %></strong>!
                     <li >
-                    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> 
+                    <%= link_to 'Minha Conta', edit_user_registration_path, :class => 'navbar-link' %> 
                     </li>
-                    
-                    <li > <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
-                    <li > </li>
+                    <li > <%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+
                     <% else %>
-                    <li > <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |</li>
+                    <li > <%= link_to "Criar Conta", new_user_registration_path, :class => 'navbar-link'  %></li>
                     <li >   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
                     <% end %>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="#about">Sobre</a>
                     </li>
                     <li>
                     <%= link_to 'Clientes', customers_index_path %>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                        
-
                     </li>
                 </ul>
             </div>
@@ -104,12 +97,8 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</p>
-                    </div>
-                    <div class="footer-col col-md-4">
+                    
+                    <div class="footer-col col-md-4" >
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
@@ -138,10 +127,7 @@
                     
                     
                     
-                    <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>

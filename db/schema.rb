@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170618215339) do
+ActiveRecord::Schema.define(version: 20170624052350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,11 @@ ActiveRecord::Schema.define(version: 20170618215339) do
     t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "rest"
+    t.integer  "user_id"
   end
+
+  add_index "customers", ["user_id"], name: "index_customers_on_user_id", using: :btree
 
   create_table "meals", force: :cascade do |t|
     t.string   "name"
@@ -53,6 +57,17 @@ ActiveRecord::Schema.define(version: 20170618215339) do
 
   add_index "menus", ["customer_id"], name: "index_menus_on_customer_id", using: :btree
 
+  create_table "restaurants", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "contact"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "restaurants", ["user_id"], name: "index_restaurants_on_user_id", using: :btree
+
   create_table "subscriptions", force: :cascade do |t|
     t.integer  "customer_id"
     t.integer  "menu_id"
@@ -82,9 +97,11 @@ ActiveRecord::Schema.define(version: 20170618215339) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "customers", "users"
   add_foreign_key "menu_x_meals", "meals"
   add_foreign_key "menu_x_meals", "menus"
   add_foreign_key "menus", "customers"
+  add_foreign_key "restaurants", "users"
   add_foreign_key "subscriptions", "customers"
   add_foreign_key "subscriptions", "menus"
 end

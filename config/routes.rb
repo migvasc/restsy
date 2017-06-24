@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
  
+  resources :restaurants
   devise_for :users
   resources :subscriptions
   resources :menu_x_meals
