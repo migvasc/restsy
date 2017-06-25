@@ -13,6 +13,8 @@ gem "capybara"
 #gem 'activerecord-jdbcpostgresql-adapter'
 
 gem 'devise'
+gem 'unirest'
+gem 'thin' 
 
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
