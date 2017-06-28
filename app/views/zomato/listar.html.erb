@@ -1,0 +1,26 @@
+<br><br><br>
+
+<h1>Escolha uma categoria:</h1>
+
+<%require 'net/http'%>
+<%require 'uri'%>
+
+
+
+<% @a.each do |z| %>
+
+
+<%= link_to  z[0], zomato_listar_restaurantes_path(:id=>params[:id],:id_c=>z[1]) %>
+<br>
+<%end%>
+<%#array["cuisines"]["cuisine"].each do |a|%>
+
+<%#= a['cuisine_name']%>
+
+
+
+
+
+
+<%#= select(:option, :option_id, array_list.map {|v| [ v['name'], v['id'] ] }) %>
+

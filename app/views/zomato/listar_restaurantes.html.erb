@@ -1,0 +1,48 @@
+<br><br><br>
+
+<h1>Restaurantes encontrados:</h1>
+
+<% @array_list.each do |r| %>
+
+<br>
+
+<div style="background-color: red;">
+<table style="width:100%">
+    
+<tr>
+<td><% if r['featured_image'].empty?  %>
+<%= image_tag("restsy_logo1.png", :size => "200x200") %>
+<% else %> 
+<%= image_tag(r['featured_image'], :size => "200x200") %>
+<%end%></td>
+<td><%= r['name'] %></td> 
+<td><%= r['location']['address'] %></td>
+<td><%= "Nota:"+ r['user_rating']['aggregate_rating'] + " ("+r['user_rating']['votes']+" votos)"%></td>
+</tr>
+<tr>
+<td></td>
+<td><%= link_to "Ver menu", r['menu_url'], target: :_blank  %></td>    
+
+</td>  
+
+
+<td>
+    <%= form_tag(new_my_list_path, :method => "get", id: "search-form") do %>
+    <p> Para começar, Informe a cidade em que você está:</p>
+        <%= text_field_tag :semana, params[:semana], placeholder: "Segunda, Terça, Quarta, Quinta ou Sexta" %>
+        <%= text_field_tag :periodo, params[:periodo], placeholder: "Café da manhã, Almoço ou Janta" %>
+        <div style="display:none">
+            <%= text_field_tag :id_r, params[:id_r], value:r['id'] %></div>
+        
+        <%= submit_tag "Salvar", :name => nil %>
+    <% end %>
+                        
+</td>                        
+
+</tr>
+</table>
+</div>
+
+<br>
+
+<%end%>

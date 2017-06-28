@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @my_list.user %>
+</p>
+
+<p>
+  <strong>Query:</strong>
+  <%= @my_list.query %>
+</p>
+
+<%= link_to 'Edit', edit_my_list_path(@my_list) %> |
+<%= link_to 'Back', my_lists_path %>

@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   
  
+  resources :my_lists
+  get 'zomato/listar_restaurantes'
+
+  get 'zomato/buscar'
+
+  get 'zomato/listar'
+
   resources :restaurants
   devise_for :users
   resources :subscriptions

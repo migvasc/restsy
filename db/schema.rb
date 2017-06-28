@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170624052350) do
+ActiveRecord::Schema.define(version: 20170628232146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,9 +53,22 @@ ActiveRecord::Schema.define(version: 20170624052350) do
     t.integer  "customer_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "semana"
+    t.string   "periodo"
   end
 
   add_index "menus", ["customer_id"], name: "index_menus_on_customer_id", using: :btree
+
+  create_table "my_lists", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "query"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "semana"
+    t.string   "periodo"
+  end
+
+  add_index "my_lists", ["user_id"], name: "index_my_lists_on_user_id", using: :btree
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
@@ -101,6 +114,7 @@ ActiveRecord::Schema.define(version: 20170624052350) do
   add_foreign_key "menu_x_meals", "meals"
   add_foreign_key "menu_x_meals", "menus"
   add_foreign_key "menus", "customers"
+  add_foreign_key "my_lists", "users"
   add_foreign_key "restaurants", "users"
   add_foreign_key "subscriptions", "customers"
   add_foreign_key "subscriptions", "menus"

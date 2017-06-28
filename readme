@@ -14,13 +14,13 @@ rails g scaffold Restaurant name:string address:string contact:string customer:r
  
 rails g scaffold Subscription customer:references menu:references active:boolean
 
+rails g scaffold MyList user:references query:string
+
 ############# database                                         ##########################
 
 http://jeffthomas.xyz/many-to-many-relationships-in-rails
 
 http://guides.rubyonrails.org/association_basics.html
-
-
 
 ############## API DAS COMIDAS COM WEB SEMANTICA E AS PORRA TODA #####################
 
@@ -28,14 +28,9 @@ https://spoonacular.com/food-api
 
 https://market.mashape.com/spoonacular/recipe-food-nutrition
 
-
 DICAS BASICAS DO RAILS -> SLIDES DAS VIDEOS AULAS LÁ
-
+ 
 http://railsforzombies.com.s3.amazonaws.com/Rails-For-Zombies-Slides.pdf
-
-
-
-
 
 #COMO ATIVAR O MODO DE PRODUÇÂO PARA DAR DEPLOY NO HEROKU:
 https://stackoverflow.com/questions/1949229/change-a-rails-application-to-production
@@ -43,3 +38,11 @@ https://stackoverflow.com/questions/1949229/change-a-rails-application-to-produc
 remover colunas do db
 https://stackoverflow.com/questions/38820188/rails-5-how-to-remove-a-column-from-a-database
 
+VIDEO NO BACKGROUD PARA FICAR CHIQUE
+http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video
+
+rails generate controller zomato listar_restaurantes 
+
+http://www.daviferreira.com/posts/interface-drag-and-drop-com-jquery-atualizado
+
+http://www.elated.com/articles/drag-and-drop-with-jquery-your-essential-guide/make

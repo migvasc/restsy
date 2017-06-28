@@ -1,0 +1,41 @@
+<h1>Zomato#listar</h1>
+<p>Você quis dizer:</p>
+<%= params[:lat]  %>
+<%= params[:long]  %>
+<%require 'net/http'%>
+<%require 'uri'%>
+
+<%require 'net/http'%>
+<%require 'uri'%>
+
+<%uri = URI.parse(URI.encode("https://developers.zomato.com/api/v2.1/cities?q="+params[:search]))%>
+<%request = Net::HTTP::Get.new(uri)%>
+<%request["Accept"] = "application/json"%>
+<%request["User-Key"] = "c79e686cb6becf6cfe454690af2f9872"%>
+
+<%req_options = {%>
+<%  use_ssl: uri.scheme == "https",%>
+<%}%>
+
+<%response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|%>
+<%  http.request(request)%>
+<%end%>
+
+
+<% array = JSON.parse response.body %>
+<%#= array %>
+
+<% #array_list = array.map { |v| v['location_suggestions'] } %>
+
+
+<%array["location_suggestions"].each do |a|%>
+<%#link_to "+ Service", new_my_service_path(:my_service => { :account_id => acct.id })%>
+<%= link_to  a['name'], zomato_listar_path(:id=>a['id']) %>
+
+<br>
+
+<%end%>
+
+
+<%#= select(:option, :option_id, array_list.map {|v| [ v['name'], v['id'] ] }) %>
+
