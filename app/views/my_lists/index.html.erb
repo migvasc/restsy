@@ -1,10 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing My Lists</h1>
-
-
-
-  
     <% @my_lists.each do |my_list| %>
     <br>
     <div style="background-color: red;">
@@ -12,6 +8,9 @@
       <tr>
         <td><%= my_list.user %></td>
         <td><%= my_list.query %></td>
+        <td><%= my_list.semana %></td>
+        <td><%= my_list.periodo %></td>
+        
         <td><%= link_to 'Show', my_list %></td>
         <td><%= link_to 'Edit', edit_my_list_path(my_list) %></td>
         <td><%= link_to 'Destroy', my_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>

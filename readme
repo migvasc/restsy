@@ -46,3 +46,5 @@ rails generate controller zomato listar_restaurantes
 http://www.daviferreira.com/posts/interface-drag-and-drop-com-jquery-atualizado
 
 http://www.elated.com/articles/drag-and-drop-with-jquery-your-essential-guide/make
+
+rails generate migration add_semana_to_mylist semana:string
