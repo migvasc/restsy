@@ -18,46 +18,106 @@
   <tr>
     <td>Café</td>
     <td><% a= MyList.where(semana:'segunda', periodo: 'cafe', user_id:current_user.id).take%>
+    <%if a.nil?%>
+    <%=''%>
+    <%else%>
     <%=a.query%>
+    <%end%>
     </td>
     
     <td><% a= MyList.where(semana:'terça', periodo: 'cafe', user_id:current_user.id).take%>
-    </td>
+    <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%></td>
     <td><% a= MyList.where(semana:'quarta', periodo: 'cafe', user_id:current_user.id).take%>
-    </td>
+    <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%></td>
     <td><% a= MyList.where(semana:'quinta', periodo: 'cafe', user_id:current_user.id).take%>
-    </td>
+    <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%></td>
     <td><% a= MyList.where(semana:'sexta', periodo: 'cafe', user_id:current_user.id).take%>
-    </td>
+    <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%></td>
   </tr>
   <tr>
     <td>Almoço</td>
    <td><% a= MyList.where(semana:'segunda', periodo: 'almoço', user_id:current_user.id).take%>
-     
+    <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%> 
     </td>
     <td><% a= MyList.where(semana:'terça', periodo: 'almoço', user_id:current_user.id).take%>
-    </td>
+    <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%></td>
     <td><% a= MyList.where(semana:'quarta', periodo: 'almoço', user_id:current_user.id).take%>
-    <%=if a.empty? # a.query else '' end%>
+    <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%>
     </td>
     <td><% a= MyList.where(semana:'quinta', periodo: 'almoço', user_id:current_user.id).take%>
-    </td>
+   <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%> </td>
     <td><% a= MyList.where(semana:'sexta', periodo: 'almoço', user_id:current_user.id).take%>
-    </td>
+  <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%>  </td>
   </tr>
   <tr>
     <td>Jantar</td>
     <td><% a= MyList.where(semana:'segunda', periodo: 'janta', user_id:current_user.id).take%>
-      
+    <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%>  
     </td>
     <td><% a= MyList.where(semana:'terça', periodo: 'janta', user_id:current_user.id).take%>
-    </td>
+   <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%> </td>
     <td><% a= MyList.where(semana:'quarta', periodo: 'janta', user_id:current_user.id).take%>
-    </td>
+   <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%> </td>
     <td><% a= MyList.where(semana:'quinta', periodo: 'janta', user_id:current_user.id).take%>
-    </td>
+    <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%></td>
     <td><% a= MyList.where(semana:'sexta', periodo: 'janta', user_id:current_user.id).take%>
-    </td>
+   <%if a.nil?%>
+    <%=''%>
+    <%else%>
+    <%=a.query%>
+    <%end%> </td>
   </tr>
 </table>
 <br><br><br><br><br><br><br>
