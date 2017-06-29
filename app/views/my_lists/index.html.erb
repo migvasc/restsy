@@ -1,19 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing My Lists</h1>
-    <% @my_lists.each do |my_list| %>
-    <br>
-    <div style="background-color: red;">
-      <table>
-      <tr>
-        <td><%= my_list.user %></td>
-        <td><%= my_list.query %></td>
-        <td><%= my_list.semana %></td>
-        
-        
-        <td><%= link_to 'Show', my_list %></td>
-        <td><%= link_to 'Edit', edit_my_list_path(my_list) %></td>
-        <td><%= link_to 'Destroy', my_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    
       </tr>
       
 </table>
@@ -29,36 +17,55 @@
   </tr>
   <tr>
     <td>Café</td>
-    <td><% a= MyList.where(semana:'segunda', periodo: 'cafe', user_id:current_user.id)%>
-    <%=a%>    
+    <td><% a= MyList.where(semana:'segunda', periodo: 'cafe', user_id:current_user.id).take%>
+    <%=a.query%>
     </td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    
+    <td><% a= MyList.where(semana:'terça', periodo: 'cafe', user_id:current_user.id).take%>
+    </td>
+    <td><% a= MyList.where(semana:'quarta', periodo: 'cafe', user_id:current_user.id).take%>
+    </td>
+    <td><% a= MyList.where(semana:'quinta', periodo: 'cafe', user_id:current_user.id).take%>
+    </td>
+    <td><% a= MyList.where(semana:'sexta', periodo: 'cafe', user_id:current_user.id).take%>
+    </td>
   </tr>
   <tr>
     <td>Almoço</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+   <td><% a= MyList.where(semana:'segunda', periodo: 'almoço', user_id:current_user.id).take%>
+     
+    </td>
+    <td><% a= MyList.where(semana:'terça', periodo: 'almoço', user_id:current_user.id).take%>
+    </td>
+    <td><% a= MyList.where(semana:'quarta', periodo: 'almoço', user_id:current_user.id).take%>
+    <%=a.query%>
+    </td>
+    <td><% a= MyList.where(semana:'quinta', periodo: 'almoço', user_id:current_user.id).take%>
+    </td>
+    <td><% a= MyList.where(semana:'sexta', periodo: 'almoço', user_id:current_user.id).take%>
+    </td>
   </tr>
   <tr>
     <td>Jantar</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td><% a= MyList.where(semana:'segunda', periodo: 'janta', user_id:current_user.id).take%>
+      
+    </td>
+    <td><% a= MyList.where(semana:'terça', periodo: 'janta', user_id:current_user.id).take%>
+    </td>
+    <td><% a= MyList.where(semana:'quarta', periodo: 'janta', user_id:current_user.id).take%>
+    </td>
+    <td><% a= MyList.where(semana:'quinta', periodo: 'janta', user_id:current_user.id).take%>
+    </td>
+    <td><% a= MyList.where(semana:'sexta', periodo: 'janta', user_id:current_user.id).take%>
+    </td>
   </tr>
 </table>
 <br><br><br><br><br><br><br>
 </div>
+
 <br>
       
-    <% end %>
+
   
 
 <%= link_to 'New My list', new_my_list_path %>
