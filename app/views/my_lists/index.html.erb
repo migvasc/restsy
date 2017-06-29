@@ -9,7 +9,7 @@
         <td><%= my_list.user %></td>
         <td><%= my_list.query %></td>
         <td><%= my_list.semana %></td>
-        <td><%= my_list.periodo %></td>
+        
         
         <td><%= link_to 'Show', my_list %></td>
         <td><%= link_to 'Edit', edit_my_list_path(my_list) %></td>
@@ -29,7 +29,9 @@
   </tr>
   <tr>
     <td>Café</td>
-    <td></td>
+    <td><% a= MyList.where(semana:'segunda', periodo: 'cafe', user_id:current_user.id)%>
+    <%=a%>    
+    </td>
     <td></td>
     <td></td>
     <td></td>
