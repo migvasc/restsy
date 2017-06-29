@@ -28,7 +28,7 @@
 
 <td>
     <%= form_tag(new_my_list_path, :method => "get", id: "search-form") do %>
-    <p> Para começar, Informe a cidade em que você está:</p>
+    
         <%= text_field_tag :semana, params[:semana], placeholder: "Segunda, Terça, Quarta, Quinta ou Sexta" %>
         <%= text_field_tag :periodo, params[:periodo], placeholder: "Café da manhã, Almoço ou Janta" %>
         <div style="display:none">
