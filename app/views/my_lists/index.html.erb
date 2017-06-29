@@ -38,7 +38,7 @@
     <td><% a= MyList.where(semana:'terça', periodo: 'almoço', user_id:current_user.id).take%>
     </td>
     <td><% a= MyList.where(semana:'quarta', periodo: 'almoço', user_id:current_user.id).take%>
-    <%=a.query%>
+    <%=if a.empty? # a.query else '' end%>
     </td>
     <td><% a= MyList.where(semana:'quinta', periodo: 'almoço', user_id:current_user.id).take%>
     </td>
